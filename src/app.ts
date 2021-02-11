@@ -1,2 +1,2 @@
-import './scss/base.scss'
+import './assets/scss/base.scss'
 

@@ -3,17 +3,18 @@ const HTMLPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssets = require('optimize-css-assets-webpack-plugin')
 const TerserJSPlugin = require('terser-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
-  entry: './src/app.ts',                  // Входной файл
-  output: {                               // Параметры выходного файла JS
-    filename: 'bundle.js',                // имя собранного файла
-    path: path.resolve(__dirname, 'dist') // папка для итогового файла
+  entry: './src/app.ts',                            // Входной файл
+  output: {                                         // Параметры выходного файла JS
+    filename: 'bundle.js',                          // имя собранного файла
+    path: path.resolve(__dirname, 'dist')           // папка для итогового файла
   },
   optimization: {
     minimizer: [
-      new TerserJSPlugin({}),             // Минимазатор JS-кода
-      new OptimizeCssAssets({})           // Минимизатор CSS
+      new TerserJSPlugin({}),                       // Минимазатор JS-кода
+      new OptimizeCssAssets({})             // Минимизатор CSS
     ]
   },
   devServer: {                                      // Настройки для локального сервера
@@ -48,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.ts$/,                          // компиляция TS через babel
-        exclude: [/node_modules/],
+        exclude: /node_modules/,
         loader: "babel-loader"
       }
     ]
@@ -61,5 +62,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css'                     // Собранный файл CSS (все css-ы собираются в него)
     }),
+    new CompressionPlugin({
+      test: /\.js(\?.*)?$/i,
+    })
   ]
 }
