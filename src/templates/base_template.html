@@ -9,10 +9,26 @@
 </head>
 <body>
 <header>
-  <div class="header">
-    <img class="header__bkg-image" src="./src/assets/images/jungle.png" alt="jungle-background">
-    <div class="header__logo"></div>
-    <button class="btn btn-danger">sdf</button>
+  <div class="header position-relative">
+    <img class="header__bkg-image position-absolute" src="./src/assets/images/jungle.png" alt="jungle-background">
+    <div class="header__container container">
+      <div class="header__nav">
+        <div class="header__nav__logo-block">
+          <img class="logo-block__logo" src="src/assets/svg/logo.svg" alt="Logo MasterSystem">
+          <span class="logo-block__title text-white">Mastersystem</span>
+        </div>
+
+        <div class="header__nav__menu-block">
+          <div class="menu__item">Кейсы</div>
+          <div class="menu__item">Особенности</div>
+          <div class="menu__item">Контакты</div>
+          <div class="menu__item">
+            <button class="login-btn">Вход</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </header>
 </body>

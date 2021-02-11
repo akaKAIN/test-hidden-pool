@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.sass|scss|css$/i,
-        use: [ MiniCssExtractPlugin.loader,'css-loader','sass-loader' ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(woff(2)?|ttf|png)?$/,
@@ -66,6 +66,7 @@ module.exports = {
   plugins: [
     new HTMLPlugin({
       filename: "index.html",                              // Имя для собраной webpack-ом страницы
+      favicon: "./src/assets/images/favicon.png",
       template: "./src/templates/base_template.html"      // HTML-Шаблон для подключения собраных CSS + JS
     }),
     new MiniCssExtractPlugin({
@@ -76,8 +77,8 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/assets/images", to: "src/assets/images" },
-        { from: "src/assets/svg", to: "src/assets/svg" },
+        {from: "src/assets/images", to: "src/assets/images"},
+        {from: "src/assets/svg", to: "src/assets/svg"},
       ],
     })
   ]
