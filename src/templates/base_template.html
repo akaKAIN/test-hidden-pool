@@ -9,26 +9,46 @@
 </head>
 <body>
 <header>
-  <div class="header position-relative">
-    <img class="header__bkg-image position-absolute" src="./src/assets/images/jungle.png" alt="jungle-background">
-    <div class="header__container container">
+  <div class="header">
+    <img class="header__bkg-image" src="./src/assets/images/jungle.png" alt="jungle-background">
+    <div class="header__container">
       <div class="header__nav">
         <div class="header__nav__logo-block">
           <img class="logo-block__logo" src="src/assets/svg/logo.svg" alt="Logo MasterSystem">
           <span class="logo-block__title text-white">Mastersystem</span>
         </div>
 
-        <div class="header__nav__menu-block">
-          <div class="menu__item">Кейсы</div>
-          <div class="menu__item">Особенности</div>
-          <div class="menu__item">Контакты</div>
-          <div class="menu__item">
-            <button class="login-btn">Вход</button>
-          </div>
+        <nav>
+          <ul class="header__nav__menu-block">
+            <li class="menu__item d-flex d-md-none"><img src="src/assets/svg/nav-menu-icon.svg" alt="Menu"></li>
+            <li class="menu__item d-none d-md-flex">Кейсы</li>
+            <li class="menu__item d-none d-md-flex">Особенности</li>
+            <li class="menu__item d-none d-md-flex">Контакты</li>
+            <li class="menu__item d-none d-sm-flex">
+              <button class="login-btn">Вход</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__content row">
+        <div class="header__content__tagline col-6">
+          <h1 class="tagline__title">Mastersystem создавай и управляй</h1>
+          <p class="tagline__text mt-4">Mastersystem - это профессиональная система управления веб-проектами, универсальный
+            программный продукт для создания, поддержки и успешного развития</p>
+          <form class="d-flex mt-5">
+            <label for="input"></label>
+            <input id="input" class="tagline__form__input" type="text" placeholder="Введите свой E-mail" />
+            <button class="tagline__form__btn" type="submit">Попробуйте бесплатно</button>
+          </form>
+        </div>
+
+        <div class="header__content__demo col-6">
+          <img class="img-fluid" src="src/assets/images/ui-examples.png" alt="ui examples">
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </header>
 </body>
