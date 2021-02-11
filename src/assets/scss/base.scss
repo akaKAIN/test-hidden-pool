@@ -1,7 +1,26 @@
-$color: green;
+$main-blue: #005ED0;
+$main-orange: #ff6100;
+$main-red: #ff0000;
+$main-black: #333333;
+$main-grey: #5f5f5f;
+$main-light: #e3e7f2;
+$main-white: #ffffff;
 
-div {
-  height: 100px;
-  width: 100px;
-  background-color: $color;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.header {
+  background-color: $main-blue;
+  height: 772px;
+  width: auto;
+
+  &__logo {
+    background-color: $main-orange;
+    width: 100px;
+    height: 200px;
+  }
 }
