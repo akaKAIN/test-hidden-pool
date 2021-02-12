@@ -2,7 +2,7 @@ $main-blue: #005ED0;
 $main-orange: #ff6100;
 $main-red: #ff0000;
 $main-black: #333333;
-$main-grey: #000333;
+$main-grey: #5f5f5f;
 $main-light: #e3e7f2;
 $main-white: #ffffff;
 
@@ -340,6 +340,7 @@ body {
     line-height: 23px;
     margin-top: 20px;
   }
+
   &__text {
     font-size: 15px;
     line-height: 19px;
