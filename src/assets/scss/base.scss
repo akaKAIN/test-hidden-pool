@@ -343,15 +343,27 @@ body {
 }
 
 .idea-item {
-  //padding-right: 30px;
   @include normal-text;
   color: $main-black;
   margin-top: 50px;
+
+  &__image {
+    width: 70px;
+    @media (max-width: 567.98px) {
+      width: 35px;
+
+    }
+  }
+
 
   &__title {
     font-size: 18px;
     line-height: 23px;
     margin-top: 20px;
+    @media (max-width: 567.98px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__text {
@@ -359,5 +371,9 @@ body {
     line-height: 19px;
     color: #5F5F5F;
     margin-top: 6px;
+    @media (max-width: 567.98px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }
