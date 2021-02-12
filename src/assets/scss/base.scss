@@ -302,8 +302,13 @@ body {
   margin: 0 auto;
   padding: 13px 0;
   @media (max-width: 1200px) {
+    height: 1061px;
     width: 100%;
     padding: 13px 40px;
+  }
+  @media (max-width: 567.98px) {
+    height: 474px;
+    padding: 0 15px;
   }
 
   &__notification {
@@ -312,6 +317,12 @@ body {
     color: $main-black;
     font-size: 40px;
     line-height: 40px;
+    @media (max-width: 991.98px) {
+      padding: 0 15%;
+    }
+    @media (max-width: 767.98px) {
+      padding: 0 10%;
+    }
 
     .notification__title {
     }
@@ -325,7 +336,9 @@ body {
 
   &__options {
     display: flex;
-
+    @media (max-width: 991.98px) {
+      margin-top: 50px;
+    }
   }
 }
 
