@@ -325,6 +325,21 @@ body {
     }
 
     .notification__title {
+      font-size: 40px;
+      line-height: 40px;
+      @media (max-width: 1200px) {
+        font-size: 36px;
+        line-height: 36px;
+      }
+      @media (max-width: 767.98px) {
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      @media (max-width: 567.98px) {
+        font-size: 24px;
+        line-height: 24px;
+      }
     }
 
     .notification__text {
@@ -353,10 +368,8 @@ body {
     width: 70px;
     @media (max-width: 567.98px) {
       width: 35px;
-
     }
   }
-
 
   &__title {
     font-size: 18px;
